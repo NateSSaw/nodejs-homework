@@ -1,6 +1,6 @@
 const express = require("express");
 
-const { contactsCtrl } = require("../../controllers");
+const { contactsCtrl } = require("../../controlers");
 const { contactSchemas } = require("../../schemas");
 const { validateBody } = require("../../decorators");
 
