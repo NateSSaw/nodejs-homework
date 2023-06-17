@@ -12,6 +12,11 @@ const addSchema = Joi.object({
   name: Joi.string().required().messages(validateMessages("name")),
   email: Joi.string().required().messages(validateMessages("email")),
   phone: Joi.number().required().messages(validateMessages("phone")),
-}).min(1);
+  favorite: Joi.boolean(),
+});
 
-module.exports = { addSchema };
+const updateFavoriteSchema = Joi.object({
+  favorite: Joi.boolean().required().messages(validateMessages("favorite")),
+});
+
+module.exports = { addSchema, updateFavoriteSchema };
