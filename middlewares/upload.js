@@ -1,15 +1,12 @@
 const multer = require("multer");
 const path = require("path");
 
-const destination = path.resolve("temp");
+const tempDir = path.join("temp");
 
 const storage = multer.diskStorage({
-  destination,
+  destination: tempDir,
   filename: (req, file, cb) => {
-    const uniquePreffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
-    const { originalname } = file;
-    const filename = `${uniquePreffix}_${originalname}`;
-    cb(null, filename);
+    cb(null, file.originalname);
   },
 });
 
