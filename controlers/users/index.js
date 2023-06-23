@@ -5,6 +5,7 @@ const signin = require("./signin");
 const current = require("./current");
 const logout = require("./logout");
 const updateSubscritionType = require("./updateSubscritionType");
+const updateUserAvatar = require("./updateUserAvatar");
 
 const user = {
   signup: ctrlWrapper(signup),
@@ -12,6 +13,7 @@ const user = {
   current: ctrlWrapper(current),
   logout: ctrlWrapper(logout),
   updateSubscritionType: ctrlWrapper(updateSubscritionType),
+  updateUserAvatar: ctrlWrapper(updateUserAvatar),
 };
 
 module.exports = user;
