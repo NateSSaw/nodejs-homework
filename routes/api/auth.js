@@ -5,6 +5,7 @@ const {
   updateSubscriptionSchema,
   emailVerify,
 } = require("../../schemas");
+
 const { authenticate, upload } = require("../../middlewares");
 const { validateBody } = require("../../decorators");
 
